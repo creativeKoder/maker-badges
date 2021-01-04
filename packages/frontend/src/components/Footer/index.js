@@ -90,11 +90,11 @@ export default function Footer() {
             <Link id="link" href="https://github.com/naszam/maker-badges">
               <h1 id="title">Contracts</h1>
             </Link>
-            <Link id="link" href="https://github.com/scottrepreneur/mb-frontend">
+            <Link id="link" href="https://github.com/creativeKoder/maker-badges/tree/master/packages/frontend">
               <h1 id="title">Frontend</h1>
             </Link>
-            <Link id="link" href="https://github.com/scottrepreneur/mb-merkle-service">
-              <h1 id="title">Merkle Service</h1>
+            <Link id="link" href="https://github.com/creativeKoder/maker-badges/tree/master/packages/api">
+              <h1 id="title">Merkle API</h1>
             </Link>
           </Title>
         ) : (
@@ -120,7 +120,7 @@ export default function Footer() {
           ReactGA.event({
             category: 'Advanced Interaction',
             action: 'Toggle Theme',
-            label: isDark ? 'Light' : 'Dark'
+            label: isDark ? 'Light' : 'Dark',
           })
           toggleDarkMode()
         }}
