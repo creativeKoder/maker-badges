@@ -2,6 +2,9 @@
   "name": "maker-badges",
   "version": "1.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [
     "ethereum",
     "maker",
@@ -29,11 +32,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -44,7 +42,8 @@
     "eslint-plugin-simple-import-sort": "5.0.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "jest": "24.9.0"
   },
   "prettier": {
     "singleQuote": true,

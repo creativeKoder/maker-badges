@@ -1,8 +1,7 @@
 {
-  "name": "metabadges-merkle-service",
+  "name": "api",
   "description": "Service for address checking and merkle proofs to redeem MetaBadges",
   "version": "1.0.0",
-  "private": true,
   "author": {
     "name": "MakerDAO"
   },
@@ -73,7 +72,7 @@
     "@types/supertest": "^2.0.4",
     "aws-auth-helper": "^1.0.0",
     "faker": "^4.1.0",
-    "jest": "^22.0.4",
+    "jest": "^24.9.0",
     "prettier": "^1.9.2",
     "serverless": "^1.26.0",
     "serverless-plugin-typescript": "^1.1.9",

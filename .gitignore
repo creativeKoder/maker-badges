@@ -23,6 +23,8 @@ yarn-error.log*
 **/**/node_modules
 /packages/api/_warmup
 
-/packages/discourse-theme-component/.discourse-site
+/packages/plugin/.discourse-site
 /packages/frontend/.env
 /packages/api/.env
+/packages/frontend/build
+/packages/api/build

@@ -1,9 +1,8 @@
 {
-  "name": "metabadges",
+  "name": "frontend",
   "description": "MetaBadges",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://metabadges.io",
-  "private": true,
   "dependencies": {
     "@babel/helper-call-delegate": "^7.10.1",
     "@reach/dialog": "^0.2.8",

@@ -23,13 +23,14 @@ const BASE_API_URL = process.env.REACT_APP_BASE_API_URL
 export function fetchBadgeList(account) {
   return new Promise((resolve, reject) => {
     fetch(BASE_API_URL + '/address/' + account)
-      .then(res => {
+      .then((res) => {
         if (res.status >= 400) {
           reject()
         }
+
         return res.json()
       })
-      .then(data => {
+      .then((data) => {
         resolve(data['badges'])
       })
   })
