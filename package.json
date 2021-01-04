@@ -1,6 +1,7 @@
 {
   "name": "maker-badges",
   "version": "1.1.0",
+  "private": true,
   "keywords": [
     "ethereum",
     "maker",
@@ -9,7 +10,6 @@
     "badges",
     "nfts"
   ],
-  "private": false,
   "scripts": {
     "api:deploy": "yarn workspace api deploy",
     "api:serve": "yarn workspace api serve",

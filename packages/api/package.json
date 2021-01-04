@@ -1,12 +1,17 @@
 {
-  "private": true,
   "name": "metabadges-merkle-service",
   "description": "Service for address checking and merkle proofs to redeem MetaBadges",
   "version": "1.0.0",
+  "private": true,
   "author": {
-    "name": "scottrepreneur"
+    "name": "MakerDAO"
   },
   "contributors": [
+    {
+      "name": "Josi",
+      "email": "iam@josi.io",
+      "url": "https://github.com/creativeKoder/maker-badges"
+    },
     {
       "name": "Scott Herren",
       "email": "scottrepreneur@ethmail.cc",
