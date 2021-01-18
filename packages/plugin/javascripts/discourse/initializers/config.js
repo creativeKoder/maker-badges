@@ -1,8 +1,6 @@
 const ThemeConfig = {
   development: {
-    lambdaUrl: (message) => {
-      return `https://f44lkeezmb.execute-api.us-east-1.amazonaws.com/dev/discourse?username=${message.username}&address=${message.address}&signature=${message.signature}`;
-    },
+    lambdaUrl: (message) => { return `https://qqz32mg1oi.execute-api.us-east-1.amazonaws.com/dev/discourse?username=${message.username}&address=${message.address}&signature=${message.signature}`; },
   },
   digitalOcean: {
     lambdaUrl: (message) => {

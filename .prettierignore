@@ -3,3 +3,5 @@ package-lock.json
 yarn.lock
 packages/api/serverless.yml
 packages/api/dynamo.json
+packages/api/src
+packages/plugin
