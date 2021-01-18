@@ -33,7 +33,9 @@ functions:
     timeout: 15
     events:
       - http: ANY /
+          cors: true
       - http: ANY /{proxy+}
+          cors: true
     environment:
       ENVIRONMENT: production
       DYNAMODB_TABLE: ${env:DYNAMODB_TABLE}
