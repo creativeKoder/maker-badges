@@ -21,18 +21,3 @@ Other commands:
 ## Writing Tests
 
 Jest has been configured to run any file ending in `*.test.ts`, `*.test.tsx` or `*.test.js`. You can put these in the `test` folder, but they can also live alongside your code in the `src` folder if you prefer.
-
-## Infrastructure
-
-Defaults:
-- Doesn't use VPC
-- Deployed to eu-west-1 (Ireland)
-- Lambda timeout: 2 seconds
-
-In the serverless.yml file uncomment from line 24 onwards to enable the hyper-paranoid security locked down setup. This uses private subnets in three availability zones, and does not include an internet gateway - which means the lambdas can't access the internet, and the only way they can be invoked is via API gateway.
-
-Key Features when uncommented:
-- No outbound connectivity at all.
-- 3 private subnets.
-- /24 block gives 250 addresses in each subnet
-- 750 addresses available in total (limits lambda instances).
