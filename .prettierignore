@@ -5,3 +5,4 @@ packages/api/serverless.yml
 packages/api/dynamo.json
 packages/api/src
 packages/plugin
+packages/api/tsconfig.json

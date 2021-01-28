@@ -8,7 +8,7 @@
   "contributors": [
     {
       "name": "Josi",
-      "email": "iam@josi.io",
+      "email": "0x00@josi.io",
       "url": "https://github.com/creativeKoder/maker-badges"
     },
     {
@@ -23,14 +23,14 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=4.3.2"
+    "node": ">=10.23.2"
   },
   "scripts": {
     "format": "prettier '**/*.ts'",
     "clean": "tsc --build --clean",
     "test": "jest && tsc --noEmit",
     "start": "ts-node src/local.ts",
-    "build": "jest && tsc",
+    "build": "jest && tsc --outDir ./build",
     "prepare": "yarn format && yarn test",
     "package": "yarn build && serverless package",
     "deploy": "yarn clean && yarn build && eval \"serverless deploy\""
@@ -39,6 +39,7 @@
     "@types/aws-serverless-express": "^3.0.1",
     "@types/compression": "^0.0.35",
     "@types/cors": "^2.8.3",
+    "@types/lodash": "^4.14.168",
     "@types/node-fetch": "^2.5.7",
     "@types/uuid": "^7.0.3",
     "apollo-cache-inmemory": "^1.6.6",
@@ -81,8 +82,8 @@
     "serverless-plugin-typescript": "^1.1.9",
     "supertest": "^3.1.0",
     "ts-jest": "^22.0.0",
-    "ts-node": "^3.3.0",
-    "typescript": "^3.1.3"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   },
   "prettier": {
     "parser": "typescript",

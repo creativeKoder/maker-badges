@@ -1,7 +1,8 @@
-const _ = require('lodash');
+import * as _ from 'lodash';
+import * as AWS from 'aws-sdk';
 const { v4: uuidv4 } = require("uuid");
 
-const AWS = require("aws-sdk");
+// const AWS = require("aws-sdk");
 
 // AWS.config.update({ region: "us-east-1" });
 // var dynamoDb = new AWS.DynamoDB.DocumentClient();

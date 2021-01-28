@@ -14,7 +14,8 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowJs": false
   },
   "exclude": ["node_modules", "test", "scripts"]
 }
