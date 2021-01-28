@@ -279,7 +279,7 @@
         "type": "bytes32"
       }
     ],
-    "name": "vote",
+    "name": "votee",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",

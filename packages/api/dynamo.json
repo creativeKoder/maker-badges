@@ -1,0 +1,48 @@
+{
+  "Table": {
+    "AttributeDefinitions": [{
+        "AttributeName": "templateId",
+        "AttributeType": "N"
+      },
+      {
+        "AttributeName": "Id",
+        "AttributeType": "S"
+      }
+    ],
+    "TableName": "maker-badges",
+    "KeySchema": [{
+      "AttributeName": "Id",
+      "KeyType": "HASH"
+    }],
+    "TableStatus": "ACTIVE",
+    "CreationDateTime": "2020-09-21T18:07:52.388000-04:00",
+    "ProvisionedThroughput": {
+      "LastIncreaseDateTime": "1969-12-31T19:00:00-05:00",
+      "LastDecreaseDateTime": "1969-12-31T19:00:00-05:00",
+      "NumberOfDecreasesToday": 0,
+      "ReadCapacityUnits": 25,
+      "WriteCapacityUnits": 25
+    },
+    "TableSizeBytes": 0,
+    "ItemCount": 0,
+    "TableArn": "arn:aws:dynamodb:ddblocal:000000000000:table/maker-badges",
+    "GlobalSecondaryIndexes": [{
+      "IndexName": "templateId-index",
+      "KeySchema": [{
+        "AttributeName": "templateId",
+        "KeyType": "HASH"
+      }],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "IndexStatus": "ACTIVE",
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 25,
+        "WriteCapacityUnits": 25
+      },
+      "IndexSizeBytes": 0,
+      "ItemCount": 0,
+      "IndexArn": "arn:aws:dynamodb:ddblocal:000000000000:table/maker-badges/index/templateId-index"
+    }]
+  }
+}

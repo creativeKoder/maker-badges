@@ -152,6 +152,7 @@ export default function BadgeList() {
     let result = await badgeFactory.activateBadge(proof, templateId - 1, 'token.json').catch(err => {
       console.log(err)
     })
+
     if (result && result.hash) {
       addTransaction(result)
     }

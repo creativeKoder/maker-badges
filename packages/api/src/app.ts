@@ -38,8 +38,8 @@ export function configureApp() {
   });
 
   app.get("/update-roots", async (req, res) => {
-    updateRoots();
-    res.json({ success: true });
+    const roots = await updateRoots();
+    res.json(roots);
   });
 
   app.get("/discourse", (req, res) => {
