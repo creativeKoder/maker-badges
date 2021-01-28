@@ -32,18 +32,16 @@ export async function checkTemplateAddressesForAddressList(
 ) {
 
   const match: any[] = addressList.map(address => {
-    if (!address) {
+    if (!address)
       return 0;
-    }
-    if (addresses.includes(address.toLowerCase()) === true) {
+
+    if (addresses.includes(address.toLowerCase()) === true)
       return address.toLowerCase();
-    } else {
-      return null;
-    }
-  })
-  var filtered = match.filter(function (el) {
-    return el != null;
+
+    return null;
   });
+
+  var filtered = match.filter(function (el) { return el != null; });
   var noDupes = [... new Set(filtered)]
 
   if (noDupes.length > 0) {

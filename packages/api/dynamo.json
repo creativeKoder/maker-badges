@@ -20,8 +20,8 @@
       "LastIncreaseDateTime": "1969-12-31T19:00:00-05:00",
       "LastDecreaseDateTime": "1969-12-31T19:00:00-05:00",
       "NumberOfDecreasesToday": 0,
-      "ReadCapacityUnits": 40000,
-      "WriteCapacityUnits": 40000
+      "ReadCapacityUnits": 25,
+      "WriteCapacityUnits": 25
     },
     "TableSizeBytes": 0,
     "ItemCount": 0,
@@ -37,8 +37,8 @@
       },
       "IndexStatus": "ACTIVE",
       "ProvisionedThroughput": {
-        "ReadCapacityUnits": 1,
-        "WriteCapacityUnits": 1
+        "ReadCapacityUnits": 25,
+        "WriteCapacityUnits": 25
       },
       "IndexSizeBytes": 0,
       "ItemCount": 0,
