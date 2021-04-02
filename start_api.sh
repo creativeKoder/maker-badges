@@ -2,4 +2,4 @@
 
 . ./packages/api/.env
 
-yarn api:start
+yarn workspace api start
