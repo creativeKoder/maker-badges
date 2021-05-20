@@ -1,25 +1,20 @@
 {
   "name": "api",
   "description": "Service for address checking and merkle proofs to redeem MetaBadges",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "author": {
     "name": "MakerDAO"
   },
   "contributors": [
     {
       "name": "Josi",
-      "email": "0x00@josi.io",
+      "email": "0x@josi.io",
       "url": "https://github.com/creativeKoder/maker-badges"
-    },
-    {
-      "name": "Scott Herren",
-      "email": "scottrepreneur@ethmail.cc",
-      "url": "https://github.com/scottrepreneur/mb-merkle-service"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/scottrepreneur/mb-merkle-service"
+    "url": "https://github.com/creativeKoder/maker-badges"
   },
   "license": "MIT",
   "engines": {
@@ -30,6 +25,7 @@
     "clean": "tsc --build --clean",
     "test": "jest && tsc --noEmit",
     "start": "ts-node src/local.ts",
+    "start:prod": "node build/src/local.js",
     "build": "jest && tsc --outDir ./build",
     "prepare": "yarn format && yarn test",
     "package": "yarn build && serverless package",

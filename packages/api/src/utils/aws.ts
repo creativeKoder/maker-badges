@@ -12,7 +12,7 @@ if (process.env.ENVIRONMENT !== "production") {
   AWS.config.credentials = credentials;
   AWS.config.update({ region: "local" });
   var localConfig = {
-    region: "localhost",
+    region: "local",
     endpoint: "http://localhost:8000",
   }
   var dynamoDb = new AWS.DynamoDB.DocumentClient(localConfig);

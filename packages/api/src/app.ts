@@ -1,3 +1,4 @@
+import * as dotenv from 'dotenv';
 import * as express from "express";
 import * as R from "ramda";
 import * as cors from "cors";
@@ -6,13 +7,16 @@ import { eventContext } from "aws-serverless-express/middleware";
 import { join } from "path";
 import { getBadgesForAddress } from "./badges";
 import { updateRoots } from "./adminActions";
+import { BadgeTemplates } from "./utils/badgeTemplates";
 
 import discourseMessage from "./utils/discourseMessage";
 
-require('dotenv').config()
-
 export function configureApp() {
+
+  dotenv.config();
+
   const app = express();
+
   app.enable("trust proxy");
   app.set("trust proxy", true);
   app.set("view engine", "jade");
@@ -24,7 +28,7 @@ export function configureApp() {
   app.use(eventContext());
 
   app.get("/", (req, res) => {
-    res.json({ blah: "test" });
+    res.json({ ...BadgeTemplates });
   });
 
   app.get("/address/:address", async (req, res) => {
