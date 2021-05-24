@@ -1,7 +1,7 @@
 {
   "name": "api",
   "description": "Service for address checking and merkle proofs to redeem MetaBadges",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "MakerDAO"
   },
@@ -26,13 +26,12 @@
     "test": "jest && tsc --noEmit",
     "start": "ts-node src/local.ts",
     "start:prod": "node build/src/local.js",
-    "build": "jest && tsc --outDir ./build",
+    "build": "tsc --outDir ./build",
     "prepare": "yarn format && yarn test",
     "package": "yarn build && serverless package",
     "deploy": "yarn clean && yarn build && eval \"serverless deploy\""
   },
   "dependencies": {
-    "@types/aws-serverless-express": "^3.0.1",
     "@types/compression": "^0.0.35",
     "@types/cors": "^2.8.3",
     "@types/lodash": "^4.14.168",
@@ -42,7 +41,6 @@
     "apollo-client": "^2.6.10",
     "apollo-link-context": "^1.0.20",
     "apollo-link-http": "^1.5.17",
-    "aws-serverless-express": "^3.1.0",
     "compression": "^1.7.1",
     "cors": "^2.8.4",
     "cross-fetch": "^3.0.4",
@@ -57,7 +55,6 @@
     "node-cron": "^2.0.3",
     "node-fetch": "^2.6.1",
     "ramda": "^0.27.1",
-    "serverless-offline": "^6.8.0",
     "source-map-support": "^0.5.3",
     "uuid": "^8.0.0"
   },
@@ -74,8 +71,6 @@
     "faker": "^4.1.0",
     "jest": "^24.9.0",
     "prettier": "^1.9.2",
-    "serverless": "^1.26.0",
-    "serverless-plugin-typescript": "^1.1.9",
     "supertest": "^3.1.0",
     "ts-jest": "^22.0.0",
     "ts-node": "^9.1.1",

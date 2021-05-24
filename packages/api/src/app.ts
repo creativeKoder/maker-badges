@@ -3,7 +3,7 @@ import * as express from "express";
 import * as R from "ramda";
 import * as cors from "cors";
 import { json, urlencoded } from "body-parser";
-import { eventContext } from "aws-serverless-express/middleware";
+// import { eventContext } from "aws-serverless-express/middleware";
 import { join } from "path";
 import { getBadgesForAddress } from "./badges";
 import { updateRoots } from "./adminActions";
@@ -25,7 +25,7 @@ export function configureApp() {
   app.use(cors());
   app.use(json());
   app.use(urlencoded({ extended: true }));
-  app.use(eventContext());
+  // app.use(eventContext());
 
   app.get("/", (req, res) => {
     res.json({ ...BadgeTemplates });
