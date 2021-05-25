@@ -1,6 +1,11 @@
-authtoken: "1WUCfekUaKgWTjfar9DUd6hqjWv_3FQtZ4jcmR3gNcNanFVfK";
-
-tunnels: mkr: region: us;
-proto: http;
-addr: "0.0.0.0:3333";
-hostname: "mkr.technology";
+authtoken: 1WUCfekUaKgWTjfar9DUd6hqjWv_3FQtZ4jcmR3gNcNanFVfK
+region: us
+tunnels:
+  api:
+    proto: http
+    addr: 0.0.0.0:3333
+    host_header: badges-api.dev
+  mkr:
+    proto: http
+    addr: 0.0.0.0:3333
+    hostname: mkr.technology

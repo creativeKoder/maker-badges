@@ -33,29 +33,21 @@ RUN rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ################################################################################
 
 ## NGROK >>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ##
-RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+RUN cd $MAKER_BADGES; wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 RUN unzip ./ngrok-stable-linux-amd64.zip
 RUN ./ngrok authtoken $NGROK_AUTH_TOKEN
 RUN mv ./ngrok /usr/bin/
-
 COPY ./ngrok.yml /root/.ngrok2/ngrok.yml
 ## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ##
 
 ## BADGES >>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ##
 COPY . $MAKER_BADGES/
+
 WORKDIR $MAKER_BADGES
 
 RUN npm i -g ts-node;
 RUN npm i -g typescript@^2.7.0;
-
-RUN yarn global add "jest@^22.4.0" "typescript@2" "dotenv" "express" "cors" "body-parser"        \
-      "@ethersproject/address@^5.0.0-beta" "@ethersproject/contracts@^5.0.0-beta"         \
-      "@ethersproject/networks@^5.0.0-beta" "@ethersproject/providers@^5.0.0-beta"        \
-      "@ethersproject/solidity@^5.0.0-beta" "react-is@>= 16.8.0" "react@^16.8.1"          \
-      "konva@>=2.6" "react-konva@>=16.8" "react-native@>=0.58" "@react-three/fiber@>=6.0" \
-      "three@>=0.126" "react-zdog@>=1.0" "zdog@>=1.0";
-
-RUN yarn install --network-concurrency 3;
+RUN yarn install;
 RUN yarn build;
 
 ENV VIRTUAL_HOST mkr.technology

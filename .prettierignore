@@ -1,8 +1,10 @@
 package.json
+
 package-lock.json
 yarn.lock
 packages/api/serverless.yml
 packages/api/dynamo.json
 packages/api/src
+packages/api/ngrok.yml
 packages/plugin
 packages/api/tsconfig.json

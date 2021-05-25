@@ -21,6 +21,6 @@ function onexit() {
   kill -9 $badges_pid
 }
 
-ngrok start mkr
+ngrok start api
 
 exec "$@"
